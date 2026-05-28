@@ -17,10 +17,10 @@ app.get("/webhook", (req, res) => {
   const challenge = req.query["hub.challenge"];
 
   if (mode && token === verify_token) {
-    return res.status(200).send(challenge);
+   res.status(200).send(challenge);
   }
 
-  return res.sendStatus(403);
+   res.sendStatus(403);
 });
 
 app.post("/webhook", async (req, res) => {
