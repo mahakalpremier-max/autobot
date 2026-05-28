@@ -41,7 +41,7 @@ app.post("/webhook", async (req, res) => {
         messaging_product: "whatsapp",
         to: from,
         text: {
-          body: Mahakal Bot Reply: ${text}
+          body: `Mahakal Bot Reply: ${text}`
         }
       },
       {
