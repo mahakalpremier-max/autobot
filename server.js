@@ -6,7 +6,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-const TOKEN = "YOUR_ACCESS_TOKEN";
+const TOKEN = "EAAbT42ReGOIBRnu1znpdzLngMPYL3BPj7OUW2p4hklnX5xlA26TXeyR0CIuhbhAukt1LIjhoQgYbVPN18NyEdgUG01iMOCiVpISkZCgIkp0aZCOKS0ewyqaEbImeR3YhNZAjWAJhvDwQeYIU72KYzzXWpydA6PJw2qJk5YTPCfArXEGaUUpV8TNhyB3TGkJpZBpsXB5ivZAAkdzHjeI2JaSrenm3pVKL5ZCz2tHyfrBkyIURllFBLIRZCKV31no2LRXLlkZCBEWpQ72JtZAeP82wgxKhu";
 const PHONE_NUMBER_ID = "YOUR_PHONE_NUMBER_ID";
 
 app.get("/webhook", (req, res) => {
