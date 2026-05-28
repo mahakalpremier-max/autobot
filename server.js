@@ -46,7 +46,7 @@ app.post("/webhook", async (req, res) => {
       },
       {
         headers: {
-          Authorization: Bearer ${TOKEN},
+          Authorization: `Bearer ${TOKEN}`,
           "Content-Type": "application/json"
         }
       }
@@ -62,5 +62,5 @@ app.post("/webhook", async (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log(Bot running on port ${PORT});
+  console.log(`Bot running on port ${PORT}`);
 });
