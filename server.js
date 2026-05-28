@@ -10,7 +10,6 @@ const TOKEN = "EAAbT42ReGOIBRnu1znpdzLngMPYL3BPj7OUW2p4hklnX5xlA26TXeyR0CIuhbhAu
 const PHONE_NUMBER_ID = "1130190110176997";
 
 app.get("/webhook", (req, res) => {
-
   const verify_token = "mahakal123";
 
   const mode = req.query["hub.mode"];
@@ -34,20 +33,20 @@ app.post("/webhook", async (req, res) => {
     }
 
     const from = message.from;
-    const text = message.text?.body || "Hi";
+    const text = message.text?.body || "Hello";
 
     await axios.post(
-      `https://graph.facebook.com/v22.0/${PHONE_NUMBER_ID}/messages`,
+      https://graph.facebook.com/v22.0/${PHONE_NUMBER_ID}/messages,
       {
         messaging_product: "whatsapp",
         to: from,
         text: {
-          body: `Mahakal Bot Reply: ${text}`
+          body: Mahakal Bot Reply: ${text}
         }
       },
       {
         headers: {
-          Authorization: `Bearer ${TOKEN}`,
+          Authorization: Bearer ${TOKEN},
           "Content-Type": "application/json"
         }
       }
@@ -63,5 +62,5 @@ app.post("/webhook", async (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log(`Bot running on port ${PORT}`);
+  console.log(Bot running on port ${PORT});
 });
